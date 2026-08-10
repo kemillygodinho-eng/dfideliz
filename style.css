@@ -1,142 +1,169 @@
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+```javascript
+/* =================================
+   CURTIDAS E DESLIKES
+================================= */
+
+let likes = 0;
+let dislikes = 0;
+
+
+const likeBtn =
+  document.getElementById("likeBtn");
+
+const dislikeBtn =
+  document.getElementById("dislikeBtn");
+
+
+const likesSpan =
+  document.getElementById("likes");
+
+const dislikesSpan =
+  document.getElementById("dislikes");
+
+
+likeBtn.addEventListener("click", () => {
+
+  likes++;
+
+  likesSpan.textContent = likes;
+
+  likeBtn.classList.toggle("ativo");
+
+});
+
+
+dislikeBtn.addEventListener("click", () => {
+
+  dislikes++;
+
+  dislikesSpan.textContent = dislikes;
+
+  dislikeBtn.classList.toggle("ativo");
+
+});
+
+
+/* =================================
+   COMENTÁRIOS
+================================= */
+
+const comentarBtn =
+  document.getElementById("comentarBtn");
+
+const comentarioInput =
+  document.getElementById("comentarioInput");
+
+const listaComentarios =
+  document.getElementById("listaComentarios");
+
+
+comentarBtn.addEventListener("click", () => {
+
+  const texto =
+    comentarioInput.value.trim();
+
+
+  if (texto === "") {
+
+    alert("Digite um comentário.");
+
+    comentarioInput.focus();
+
+    return;
+  }
+
+
+  const comentario =
+    document.createElement("div");
+
+
+  comentario.classList.add(
+    "comentario-item"
+  );
+
+
+  comentario.textContent = texto;
+
+
+  listaComentarios.prepend(
+    comentario
+  );
+
+
+  comentarioInput.value = "";
+
+  comentarioInput.focus();
+
+});
+
+
+/* =================================
+   MODO ESCURO / MODO CLARO
+================================= */
+
+const themeBtn =
+  document.getElementById("themeBtn");
+
+
+/*
+  Verifica se o usuário já escolheu
+  um tema anteriormente.
+*/
+
+const temaSalvo =
+  localStorage.getItem("tema");
+
+
+if (temaSalvo === "claro") {
+
+  document.body.classList.add(
+    "light-mode"
+  );
+
+  themeBtn.textContent =
+    "☀️ Modo Claro";
 }
 
-body{
-  background:#160f0f;
-  color:#fff;
-  font-family:'Poppins',sans-serif;
-  line-height:1.8;
-}
 
-.hero{
-  height:80vh;
-  background:
-    linear-gradient(
-      rgba(25,10,10,.55),
-      rgba(70,0,0,.80)
-    ),
-    url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7_QJbV8LNVeQgyRLwDRm5z93fVYrzuNvXWyY0D_MDJQ&s=10');
+/* =================================
+   ALTERAR TEMA
+================================= */
 
-  background-size:cover;
-  background-position:center 70%;
-  background-repeat:no-repeat;
+themeBtn.addEventListener("click", () => {
 
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-}
+  document.body.classList.toggle(
+    "light-mode"
+  );
 
-.overlay{
-  padding:20px;
-}
 
-.diario{
-  color:#c89f74;
-  letter-spacing:4px;
-  margin-bottom:20px;
-}
+  const modoClaro =
+    document.body.classList.contains(
+      "light-mode"
+    );
 
-.hero h1{
-  font-family:'Oswald',sans-serif;
-  font-size:5rem;
-  color:#ffffff;
-  letter-spacing:5px;
-}
 
-.subtitulo{
-  color:#e3c3a2;
-  margin-top:15px;
-}
+  if (modoClaro) {
 
-main{
-  width:90%;
-  max-width:1200px;
-  margin:50px auto;
-}
+    themeBtn.textContent =
+      "☀️ Modo Claro";
 
-.card{
-  background:#241717;
-  border-left:6px solid #8f1d1d;
-  padding:30px;
-  margin-bottom:35px;
-  border-radius:18px;
-}
+    localStorage.setItem(
+      "tema",
+      "claro"
+    );
 
-.card h2{
-  color:#dcb48f;
-  margin-bottom:20px;
-  font-family:'Oswald',sans-serif;
-}
+  } else {
 
-.acoes{
-  margin-top:25px;
-}
+    themeBtn.textContent =
+      "🌙 Modo Escuro";
 
-.acoes button,
-#comentarBtn{
-  background:#382323;
-  color:#fff;
-  border:none;
-  padding:12px 20px;
-  border-radius:12px;
-  cursor:pointer;
-  margin-right:10px;
-  transition:.3s;
-}
+    localStorage.setItem(
+      "tema",
+      "escuro"
+    );
 
-.acoes button.ativo{
-  background:#c1121f;
-}
+  }
 
-.galeria{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
-}
+});
+```
 
-.galeria img{
-  width:100%;
-  height:280px;
-  object-fit:cover;
-  border-radius:12px;
-  border:3px solid #8f1d1d;
-}
-
-.musicas{
-  padding-left:25px;
-}
-
-.musicas li{
-  margin-bottom:10px;
-}
-
-textarea{
-  width:100%;
-  min-height:120px;
-  background:#1c1313;
-  color:#fff;
-  border:1px solid #8f1d1d;
-  border-radius:10px;
-  padding:15px;
-  margin-bottom:15px;
-  resize:vertical;
-}
-
-.comentario-item{
-  background:#1c1313;
-  border-left:4px solid #c1121f;
-  padding:15px;
-  border-radius:10px;
-  margin-top:15px;
-}
-
-footer{
-  background:#0c0909;
-  text-align:center;
-  padding:25px;
-  color:#cfcfcf;
-}

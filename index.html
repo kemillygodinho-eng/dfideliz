@@ -3,6 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Diário Virtual sobre DFideliz, sua trajetória, músicas e influência no trap brasileiro."
+  >
+
   <title>Diário Virtual • DFideliz</title>
 
   <link rel="stylesheet" href="style.css">
@@ -10,155 +16,405 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
 </head>
+
 <body>
 
-<header class="hero">
-  <div class="overlay">
-    <p class="diario">MEU DIÁRIO VIRTUAL</p>
-    <h1>DFIDELIZ</h1>
+  <header class="hero">
 
-    <p class="subtitulo">
-      Rapper • Compositor • Trap Brasileiro
-    </p>
-  </div>
-</header>
+    <div class="overlay">
 
-<main>
-
-  <section class="card">
-    <h2>Quem é DFideliz?</h2>
-
-    <p>
-      Felipe Micaela, conhecido artisticamente como DFideliz,
-      nasceu em São Paulo e cresceu no Jardim Fontalis.
-      É um dos nomes que ajudaram a consolidar o trap nacional,
-      sendo reconhecido por suas letras marcantes e pela forte
-      conexão com a realidade das periferias.
-    </p>
-
-    <div class="acoes">
-      <button id="likeBtn">
-        ❤️ Curtir
-        <span id="likes">0</span>
+      <button id="temaBtn" class="tema-btn" aria-label="Alternar tema">
+        🌙 Modo escuro
       </button>
 
-      <button id="dislikeBtn">
-        👎 Deslike
-        <span id="dislikes">0</span>
+      <p class="diario">MEU DIÁRIO VIRTUAL</p>
+
+      <h1>DFIDELIZ</h1>
+
+      <p class="subtitulo">
+        Rapper • Compositor • Trap Brasileiro
+      </p>
+
+      <p class="descricao-hero">
+        Conheça a trajetória, as músicas e a importância de DFideliz
+        para o trap nacional.
+      </p>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <!-- SOBRE O ARTISTA -->
+
+    <section class="card destaque">
+
+      <span class="categoria">SOBRE O ARTISTA</span>
+
+      <h2>Quem é DFideliz?</h2>
+
+      <p>
+        Felipe Micaela, conhecido artisticamente como DFideliz,
+        nasceu em São Paulo e cresceu no Jardim Fontalis.
+        O artista se tornou um dos nomes importantes do trap
+        brasileiro, destacando-se por suas letras marcantes e
+        pela conexão com experiências vividas nas periferias.
+      </p>
+
+      <p>
+        Sua trajetória é marcada por independência, criatividade
+        e participação em um dos movimentos que ajudaram a
+        popularizar o trap no Brasil.
+      </p>
+
+      <div class="acoes">
+
+        <button id="likeBtn">
+          ❤️ Curtir
+          <span id="likes">0</span>
+        </button>
+
+        <button id="dislikeBtn">
+          👎 Deslike
+          <span id="dislikes">0</span>
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- POSTS -->
+
+    <section class="posts-section">
+
+      <div class="titulo-secao">
+        <span class="categoria">DIÁRIO</span>
+        <h2>Posts do blog</h2>
+        <p>
+          Confira alguns conteúdos sobre a trajetória e a música de DFideliz.
+        </p>
+      </div>
+
+
+      <div class="posts-grid">
+
+
+        <!-- POST 1 -->
+
+        <article class="post-card">
+
+          <div class="post-imagem">
+
+            <img
+              src="https://i.pinimg.com/736x/8e/f3/9f/8ef39f954b849c2aac434595c3c15836.jpg"
+              alt="DFideliz"
+            >
+
+            <span>TRAJETÓRIA</span>
+
+          </div>
+
+          <div class="post-conteudo">
+
+            <small>Publicado no Diário Virtual</small>
+
+            <h3>Como tudo começou</h3>
+
+            <p>
+              Desde muito jovem, DFideliz demonstrava interesse
+              pela música. No cenário underground paulista,
+              começou a lançar trabalhos independentes e encontrou
+              no trap uma maneira de expressar suas vivências,
+              sentimentos e sonhos.
+            </p>
+
+            <p>
+              Em 2017, lançou o EP <strong>Reflexões</strong>,
+              projeto que ajudou a apresentar seu trabalho
+              para um público maior.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <!-- POST 2 -->
+
+        <article class="post-card">
+
+          <div class="post-imagem">
+
+            <img
+              src="https://i.pinimg.com/736x/4b/bb/d5/4bbbd59386ee0c88c24b9c6fc7eb9dda.jpg"
+              alt="DFideliz durante sua carreira musical"
+            >
+
+            <span>TRAP</span>
+
+          </div>
+
+          <div class="post-conteudo">
+
+            <small>Publicado no Diário Virtual</small>
+
+            <h3>A ascensão no trap brasileiro</h3>
+
+            <p>
+              DFideliz ganhou notoriedade nacional ao integrar
+              a Recayd Mob, coletivo que teve papel importante
+              no crescimento do trap brasileiro.
+            </p>
+
+            <p>
+              A música <strong>Plaqtudum</strong> se tornou um
+              dos grandes destaques dessa fase e ajudou a levar
+              o trabalho do grupo para diferentes públicos.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <!-- POST 3 -->
+
+        <article class="post-card">
+
+          <div class="post-imagem">
+
+            <img
+              src="https://cdn-images.dzcdn.net/images/artist/4ab93d26ba453566b8a186cca1fb2008/1900x1900-000000-81-0-0.jpg"
+              alt="DFideliz artista de trap"
+            >
+
+            <span>MÚSICA</span>
+
+          </div>
+
+          <div class="post-conteudo">
+
+            <small>Publicado no Diário Virtual</small>
+
+            <h3>As músicas que marcaram sua carreira</h3>
+
+            <p>
+              Ao longo de sua trajetória, DFideliz lançou músicas
+              que conquistaram espaço entre os fãs do trap.
+              Entre elas estão <strong>Plaqtudum</strong>,
+              <strong>Obrigado, Mãe</strong> e
+              <strong>Preto e Dinheiro</strong>.
+            </p>
+
+            <p>
+              Suas músicas misturam diferentes experiências,
+              sentimentos e reflexões, criando uma identidade
+              própria dentro da cena.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <!-- POST 4 -->
+
+        <article class="post-card">
+
+          <div class="post-imagem">
+
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6n4taP7GM6HZPTNVQVcQyEbH6cax2F1fWmTkDkDifIw&s=10"
+              alt="DFideliz"
+            >
+
+            <span>INFLUÊNCIA</span>
+
+          </div>
+
+          <div class="post-conteudo">
+
+            <small>Publicado no Diário Virtual</small>
+
+            <h3>A importância da representatividade</h3>
+
+            <p>
+              O crescimento do trap brasileiro também abriu espaço
+              para artistas contarem suas próprias histórias.
+              DFideliz faz parte desse movimento ao levar para
+              suas músicas experiências pessoais e elementos
+              relacionados à realidade das periferias.
+            </p>
+
+            <p>
+              Essa conexão com a realidade é um dos elementos
+              que aproxima o artista de seu público.
+            </p>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- MÚSICAS -->
+
+    <section class="card">
+
+      <span class="categoria">PLAYLIST</span>
+
+      <h2>Músicas mais conhecidas</h2>
+
+      <ul class="musicas">
+
+        <li>Plaqtudum</li>
+        <li>Obrigado, Mãe</li>
+        <li>Preto e Dinheiro</li>
+        <li>Sessão do Descarrego</li>
+        <li>Progresso</li>
+        <li>Confissões Pt.1</li>
+        <li>Cê Tá Bem (Remix)</li>
+
+      </ul>
+
+    </section>
+
+
+    <!-- CURIOSIDADES -->
+
+    <section class="card">
+
+      <span class="categoria">VOCÊ SABIA?</span>
+
+      <h2>Curiosidades</h2>
+
+      <ul class="curiosidades">
+
+        <li>
+          <span>01</span>
+          Começou a carreira ainda adolescente.
+        </li>
+
+        <li>
+          <span>02</span>
+          É um dos nomes associados ao crescimento do trap nacional.
+        </li>
+
+        <li>
+          <span>03</span>
+          Suas músicas abordam experiências pessoais e superação.
+        </li>
+
+        <li>
+          <span>04</span>
+          Possui forte conexão com seus fãs.
+        </li>
+
+      </ul>
+
+    </section>
+
+
+    <!-- GALERIA -->
+
+    <section class="card">
+
+      <span class="categoria">FOTOS</span>
+
+      <h2>Galeria</h2>
+
+      <div class="galeria">
+
+        <img
+          src="https://i.pinimg.com/736x/8e/f3/9f/8ef39f954b849c2aac434595c3c15836.jpg"
+          alt="DFideliz"
+        >
+
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAoRN7jo3Yebe_x4fTH6m_LUX8Y4kzeGJ16x5zbUk2TQ&s=10"
+          alt="DFideliz"
+        >
+
+        <img
+          src="https://i.pinimg.com/736x/4b/bb/d5/4bbbd59386ee0c88c24b9c6fc7eb9dda.jpg"
+          alt="DFideliz"
+        >
+
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuKDMcPvXvWPZuuBJ10xveHB3VICuFwcm9cDGBavT8rA&s=10"
+          alt="DFideliz"
+        >
+
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS82XzeEGg7-7QLquN1HwAXNJeuemWXJ_48uSKQA-jRW6qsRpKBLEKiHms&s=10"
+          alt="DFideliz"
+        >
+
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6n4taP7GM6HZPTNVQVcQyEbH6cax2F1fWmTkDkDifIw&s=10"
+          alt="DFideliz"
+        >
+
+      </div>
+
+    </section>
+
+
+    <!-- COMENTÁRIOS -->
+
+    <section class="card comentarios">
+
+      <span class="categoria">INTERAÇÃO</span>
+
+      <h2>Comentários</h2>
+
+      <p>
+        O que você acha da trajetória de DFideliz?
+        Compartilhe sua opinião.
+      </p>
+
+      <textarea
+        id="comentarioInput"
+        placeholder="Escreva um comentário..."
+        aria-label="Escreva um comentário"
+      ></textarea>
+
+      <button id="comentarBtn">
+        💬 Comentar
       </button>
-    </div>
-  </section>
 
-  <section class="card">
-    <h2>Como Tudo Começou</h2>
+      <div id="listaComentarios"></div>
 
-    <p>
-      Desde muito jovem, DFideliz demonstrava interesse pela música.
-      No cenário underground paulista, começou a lançar músicas
-      independentes e encontrou no trap uma forma de expressar suas
-      vivências e sonhos.
-    </p>
+    </section>
+
+  </main>
+
+
+  <footer>
 
     <p>
-      Em 2017, lançou o EP <strong>Reflexões</strong>,
-      que ajudou a apresentar seu trabalho ao público.
-    </p>
-  </section>
-
-  <section class="card">
-    <h2>A Ascensão no Trap</h2>
-
-    <p>
-      DFideliz ganhou notoriedade nacional ao integrar a
-      Recayd Mob, coletivo responsável por impulsionar o trap
-      brasileiro para um novo patamar.
+      Diário Virtual • DFideliz
     </p>
 
-    <p>
-      A música <strong>Plaqtudum</strong> é considerada um dos
-      primeiros grandes sucessos do gênero no Brasil e ajudou
-      a projetar o artista nacionalmente.
+    <p class="footer-sub">
+      Projeto desenvolvido para estudo de HTML, CSS e JavaScript.
     </p>
-  </section>
 
-  <section class="card">
-    <h2>Músicas Mais Conhecidas</h2>
+  </footer>
 
-    <ul class="musicas">
-      <li>Plaqtudum</li>
-      <li>Obrigado, Mãe</li>
-      <li>Preto e Dinheiro</li>
-      <li>Sessão do Descarrego</li>
-      <li>Progresso</li>
-      <li>Confissões Pt.1</li>
-      <li>Cê Tá Bem (Remix)</li>
-    </ul>
-  </section>
 
-  <section class="card">
-    <h2>Curiosidades</h2>
-
-    <ul class="musicas">
-      <li>Começou a carreira ainda adolescente.</li>
-      <li>É considerado um dos pioneiros do trap nacional.</li>
-      <li>Suas músicas frequentemente abordam superação e experiências pessoais.</li>
-      <li>Possui uma forte conexão com os fãs por meio das redes sociais.</li>
-    </ul>
-  </section>
-
-  <section class="card">
-    <h2>Galeria</h2>
-
-    <div class="galeria">
-
-      <img src="https://i.pinimg.com/736x/8e/f3/9f/8ef39f954b849c2aac434595c3c15836.jpg" alt="DFideliz">
-
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAoRN7jo3Yebe_x4fTH6m_LUX8Y4kzeGJ16x5zbUk2TQ&s=10" alt="DFideliz">
-
-      <img src="https://i.pinimg.com/736x/4b/bb/d5/4bbbd59386ee0c88c24b9c6fc7eb9dda.jpg" alt="DFideliz">
-
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuKDMcPvXvWPZuuBJ10xveHB3VICuFwcm9cDGBavT8rA&s=10" alt="DFideliz">
-
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS82XzeEGg7-7QLquN1HwAXNJeuemWXJ_48uSKQA-jRW6qsRpKBLEKiHms&s=10" alt="DFideliz">
-
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6n4taP7GM6HZPTNVQVcQyEbH6cax2F1fWmTkDkDifIw&s=10"
-  alt="DFideliz">
-
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJyxiqTU-dp61oqENO1lcHlEIoGtIPV-nyWx51NCYX6w&s=10"
-  alt="DFideliz">
-
-     <img src="https://cdn-images.dzcdn.net/images/artist/4ab93d26ba453566b8a186cca1fb2008/1900x1900-000000-81-0-0.jpg"
-  alt="DFideliz"> 
-  
-    </div>
-  </section>
-
-  <section class="card comentarios">
-
-    <h2>Comentários</h2>
-
-    <textarea
-      id="comentarioInput"
-      placeholder="Escreva um comentário...">
-    </textarea>
-
-    <button id="comentarBtn">
-      💬 Comentar
-    </button>
-
-    <div id="listaComentarios"></div>
-
-  </section>
-
-</main>
-
-<footer>
-  <p>Diário Virtual • DFideliz</p>
-</footer>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 
 </body>
 </html>
